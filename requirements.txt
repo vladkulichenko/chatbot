@@ -1,6 +1,7 @@
 langchain~=0.2.12
 langchain_ollama
 python-dotenv~=1.0.1
+langchain_openai
 openai==1.35.14
 fastapi~=0.112.0
 uvicorn~=0.30.5
