@@ -20,8 +20,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-llm = ChatOllama(temperature=0.5, model='llama3-groq-tool-use', model_kwargs={"seed": 42}, stream=True)
-# llm = ChatOpenAI(temperature=0, model='gpt-4o-mini')
+# llm = ChatOllama(temperature=0.5, model='llama3-groq-tool-use', model_kwargs={"seed": 42}, stream=True)
+llm = ChatOpenAI(temperature=0, model='gpt-4o-mini')
 tools = [mls_tool]
 
 history = StreamlitChatMessageHistory()
