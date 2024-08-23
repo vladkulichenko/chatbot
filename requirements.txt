@@ -1,2 +1,12 @@
-streamlit
-openai
+langchain~=0.2.12
+langchain_ollama
+python-dotenv~=1.0.1
+openai==1.35.14
+fastapi~=0.112.0
+uvicorn~=0.30.5
+jmespath~=1.0.1
+langchain_community==0.2.7
+pytest
+pandas~=2.2.2
+requests~=2.32.3
+pydantic~=2.8.2
