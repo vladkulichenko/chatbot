@@ -12,6 +12,7 @@ from langchain_core.runnables import RunnableWithMessageHistory
 from langchain_community.chat_message_histories import ChatMessageHistory, StreamlitChatMessageHistory
 from langchain_ollama import ChatOllama
 from langchain.load.dump import dumps
+from ast import literal_eval
 
 from langchain_openai import ChatOpenAI
 from prompts import appraisal_bot_prompt
@@ -79,4 +80,4 @@ if user_query := st.chat_input():
             "input": user_query,
             "chat_history": history,
         }, {'configurable': {'session_id': 'placeholder_id'}, "callbacks": [st_callback, callback]}))
-        st.write(response['output'].get(content, ""))
+        st.write(literal_eval(response['output']).get('content'))
