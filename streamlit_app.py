@@ -79,4 +79,4 @@ if user_query := st.chat_input():
             "input": user_query,
             "chat_history": history,
         }, {'configurable': {'session_id': 'placeholder_id'}, "callbacks": [st_callback, callback]}))
-        st.write(response['output'])
+        st.write(str(response['output'].get(content, "")))
